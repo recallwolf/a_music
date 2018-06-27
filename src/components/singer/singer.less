@@ -1,0 +1,33 @@
+.singer {
+  position: fixed;
+  top: 85px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: auto;
+  .singer-title {
+    height: 30px;
+    background-color: rgba(7,17,27,0.3);
+    line-height: 30px;
+    padding-left: 10px;
+    border-top: 0.5px solid rgba(7,17,27,0.2);
+    border-bottom: 0.5px solid rgba(7,17,27,0.2);
+  }
+  .singer-info {
+    display: flex;
+    height: 70px;
+    .singer-img {
+      width: 80px;
+      padding-left: 15px;
+      padding-top: 15px;
+    }
+    .singer-name {
+      flex: 1;
+      line-height: 70px;
+      font-size: 16px;
+    }
+  }
+  .singer-info:last-child {
+    margin-bottom: 15px;
+  }
+}

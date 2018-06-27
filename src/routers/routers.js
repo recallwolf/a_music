@@ -6,7 +6,7 @@ class Routers extends Component {
   render() {
     return (
       <HashRouter>
-          <Route path='/' component={App}></Route>
+        <Route path="/" component={App}></Route>
       </HashRouter>
     );
   }
