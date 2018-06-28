@@ -1,0 +1,44 @@
+.table {
+  position: fixed;
+  top: 84px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: auto;
+  .table-box {
+    display: flex;
+    height: 120px;
+    padding-top: 15px;
+    padding-left: 15px;
+    border-bottom: 0.4px solid rgba(7,17,27,0.3);
+    .table-img {
+      width: 130px;
+    }
+    .table-text {
+      flex: 1;
+      padding-top: 4px;
+      margin-right: 20px;
+      width: 0;
+      .table-song {
+        height: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .text {
+          font-size: 15px;
+          padding-right: 10px;
+          display: inline-block;
+          line-height: 30px;
+          color: rgba(7,17,27,0.6);
+        }
+        .text:last-child {
+          font-size: 13px;
+          padding-right: 0;
+          display: inline-block;
+          line-height: 30px;
+          color: rgba(7,17,27,0.6);
+        }
+      }
+    }
+  }
+}
