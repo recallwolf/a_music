@@ -1,0 +1,62 @@
+.singerDetail {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255,255,255);
+  z-index: 1;
+  .singerDetail-img {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-size: cover;
+    border-bottom: 0.3px solid rgba(7,17,27,0.2);
+    .icon-pos {
+      color: rgb(46, 191, 138);
+      font-size: 18px;
+      line-height: 50px;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      font-weight: bold;
+    }
+  }
+  .singerDetail-content {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    .singerDetail-info {
+      height: 54px;
+      padding-left: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 0.5px solid rgba(7,17,27,0.2);
+      .singerDetail-name {
+        width: 90%;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20px;
+        color: rgba(7,17,27,0.9);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .singerDetail-text {
+        width: 90%;
+        font-size: 14px;
+        position: relative;
+        top: 14px;
+        line-height: 30px;
+        color: rgba(7,17,27,0.6);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

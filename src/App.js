@@ -5,6 +5,9 @@ import Singer from '@/components/singer/singer.js';
 import Table from '@/components/table/table.js';
 import Search from '@/components/search/search.js';
 import {Route, Redirect, Switch} from 'react-router-dom';
+import SingerDetail from '@/components/singerDetail/singerDetail.js';
+import Disc from '@/components/disc/disc.js';
+import Toplist from '@/components/toplist/toplist.js';
 
 class App extends Component {
   render() {
@@ -18,8 +21,11 @@ class App extends Component {
           <Route path="/search" component={Search}></Route>
           <Redirect from="/" to="/recommend" exact></Redirect>
         </Switch>
+        <Route path="/singer/:id" component={SingerDetail}></Route>
+        <Route path="/recommend/:id" component={Disc}></Route>
+        <Route path="/table/:id" component={Toplist}></Route>
       </div>
-    );
+    )
   }
 }
 

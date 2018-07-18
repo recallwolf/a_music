@@ -20,14 +20,16 @@ class table extends Component {
           toplist: res.data.topList
         })
       }
-      console.log(this.state.toplist)
     })
+  }
+  toToplist(list) {
+    this.props.history.push({pathname: `/table/${list.id}`, state: list.picUrl})
   }
   render() {
     return (
       <div className="table">
         {this.state.toplist.map((list, index) =>
-          <div key={index} className="table-box">
+          <div key={index} className="table-box" onClick={this.toToplist.bind(this, list)}>
             <div className="table-img">
               <img src={list.picUrl} style={{width: '100px', height: '100px'}} />
             </div>

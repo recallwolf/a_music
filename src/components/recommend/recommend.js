@@ -22,11 +22,14 @@ class recommend extends Component {
       }
     })
   }
+  toDisc(item) {
+    this.props.history.push({pathname: `/recommend/${item.dissid}`, state: item.imgurl})
+  }
   render() {
     return (
       <div className="recommend">
         {this.state.discList.map((item, index) =>
-          <div key={index} className="recommend-item">
+          <div key={index} className="recommend-item" onClick={this.toDisc.bind(this, item)}>
             <div className="recommend-img">
               <img src={item.imgurl} style={{width: '60px', height: '60px'}}/>
             </div>

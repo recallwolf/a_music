@@ -13,13 +13,15 @@ class singer extends Component {
   componentDidMount() {
     this._getSingerList()
   }
+  toSingerDetail(singer) {
+    this.props.history.push({pathname: `/singer/${singer.id}`, state: singer.avatar})
+  }
   _getSingerList() {
     getSingerList().then((res) => {
       if (res.code === ERR_OK) {
         this.setState({
           singers: this._normalizeSinger(res.data.list)
         })
-        console.log(this.state.singers)
       }
     })
   }
@@ -82,7 +84,7 @@ class singer extends Component {
                 {singer.title}
               </div>
               {singer.items.map((info, index) => 
-                <div key={index} className="singer-info">
+                <div key={index} className="singer-info" onClick={this.toSingerDetail.bind(this, info)}>
                   <div className="singer-img">
                     <img src={info.avatar} style={{width: '50px', height: '50px', borderRadius: '50%'}} />
                   </div>
